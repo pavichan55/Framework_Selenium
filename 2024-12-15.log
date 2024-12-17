@@ -1,0 +1,32 @@
+2024-12-15 15:36:44,028 Open Google and Navigate to Search Page
+2024-12-15 15:36:44,029 ====== WebDriver manager ======
+2024-12-15 15:36:45,000 Get LATEST chromedriver version for google-chrome
+2024-12-15 15:36:45,004 Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-12-15 15:36:45,132 https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/11" 200 8679
+2024-12-15 15:36:45,143 Get LATEST chromedriver version for google-chrome
+2024-12-15 15:36:45,145 Starting new HTTPS connection (1): googlechromelabs.github.io:443
+2024-12-15 15:36:45,254 https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/11" 200 8679
+2024-12-15 15:36:45,257 Driver [C:\Users\deepa\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-15 15:36:45,257 Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\deepa\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe
+2024-12-15 15:36:45,265 Started executable: `C:\Users\deepa\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe` in a child process with pid: 10236 using 0 to output -3
+2024-12-15 15:36:45,796 POST http://localhost:49431/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'extensions': [], 'args': []}}}}
+2024-12-15 15:36:45,798 Starting new HTTP connection (1): localhost:49431
+2024-12-15 15:36:46,389 http://localhost:49431 "POST /session HTTP/11" 200 0
+2024-12-15 15:36:46,389 Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.86","chrome":{"chromedriverVersion":"131.0.6778.108 (3b014839fbc4fb688b2f5af512d6ce312ad208b1-refs/branch-heads/6778@{#2393})","userDataDir":"C:\\Users\\deepa\\AppData\\Local\\Temp\\scoped_dir10236_258965683"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49435"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"00479210f3f0f8cd05469745eeb9d7ee"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-15 15:36:46,389 Finished Request
+2024-12-15 15:36:46,389 POST http://localhost:49431/session/00479210f3f0f8cd05469745eeb9d7ee/window/maximize {}
+2024-12-15 15:36:46,425 http://localhost:49431 "POST /session/00479210f3f0f8cd05469745eeb9d7ee/window/maximize HTTP/11" 200 0
+2024-12-15 15:36:46,426 Remote response: status=200 | data={"value":{"height":832,"width":1552,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-15 15:36:46,426 Finished Request
+2024-12-15 15:36:46,426 POST http://localhost:49431/session/00479210f3f0f8cd05469745eeb9d7ee/url {'url': 'https://www.google.com/'}
+2024-12-15 15:36:48,916 http://localhost:49431 "POST /session/00479210f3f0f8cd05469745eeb9d7ee/url HTTP/11" 200 0
+2024-12-15 15:36:48,916 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-15 15:36:48,916 Finished Request
+2024-12-15 15:36:53,917 GET http://localhost:49431/session/00479210f3f0f8cd05469745eeb9d7ee/title {}
+2024-12-15 15:36:53,932 http://localhost:49431 "GET /session/00479210f3f0f8cd05469745eeb9d7ee/title HTTP/11" 200 0
+2024-12-15 15:36:53,932 Remote response: status=200 | data={"value":"Google"} | headers=HTTPHeaderDict({'Content-Length': '18', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-15 15:36:53,932 Finished Request
+2024-12-15 15:36:53,932 DELETE http://localhost:49431/session/00479210f3f0f8cd05469745eeb9d7ee {}
+2024-12-15 15:36:54,041 http://localhost:49431 "DELETE /session/00479210f3f0f8cd05469745eeb9d7ee HTTP/11" 200 0
+2024-12-15 15:36:54,042 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-15 15:36:54,042 Finished Request
