@@ -1,5 +1,5 @@
 Owner : Pavithran
-Development Phase Started: Sept 6th 2021
+Development Phase Started: Sept 6th 2024
 Features:
 1) Reusability
 2) Easy to arrange testflow repeated flow testing
@@ -20,6 +20,7 @@ certain testcases enabled as Yes in ExecutionController
 8) Locators - Defining all element identifier accordingly. Dynamix Xpath Implementation using format
 9) POM model for defining reusable methods
 10) MethodDictionary repo is keyword framework
+11) Containerization has been achieved using docker for test execution
 
 
 Yet to be done

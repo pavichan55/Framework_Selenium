@@ -1,3 +1,5 @@
+import subprocess
+
 from AutomationTestLevel.POM.MasterPage import MasterPage
 from AutomationTestLevel.POM.LoginPage import LoginPage
 from AutomationTestLevel.POM.DashboardPage import DashboardPage
@@ -20,6 +22,8 @@ class BasePage:
         
     def teardown(self):
         self.driver.quit()
+        if config.execution_mode == 'docker':
+            subprocess.run(["docker-compose", "down"], check=True)
         
     def execute(self):
         testHybridPacakage = DynamicDataManager.runtimedata["testFlowSuite"]
@@ -37,7 +41,10 @@ class BasePage:
                 for tf in testFlow:
                     DynameRuntimeDatastorage(testCaseIDkey,tf)
                     dynamicrepodata=StaticdataManager.getKWDclassName(tf)
-                    func_to_run = getattr(eval(dynamicrepodata[0]+"()"), dynamicrepodata[1])
+
+                    func_to_run = getattr(eval(dynamicrepodata[0] + "()"), dynamicrepodata[1])
+
+
                     func_to_run()
                     (DynamicDataManager.runtimedata["testFlowSuite"][testCaseIDkey]['testFlow']).pop(0)
                     dydata=(DynamicDataManager.runtimedata["testFlowSuite"][testCaseIDkey]['iterDictTestFlow']).items()
