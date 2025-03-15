@@ -1,1 +1,1 @@
-{"DashboardPage": [], "LoginPage": [], "MasterPage": ["btnDoodle", "btnGoogleLens", "openApp", "openBS"]}
+{"DashboardPage": ["launchApp"], "LoginPage": [], "MasterPage": ["btnDoodle", "btnGoogleLens", "openApp", "openBS"]}

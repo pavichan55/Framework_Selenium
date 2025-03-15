@@ -7,9 +7,11 @@ browserClose = True
 
 headlessmode = False
 
-execution_mode = "docker" #docker #local
+execution_mode = "android" #docker #local #android
 docker_port = "http://localhost:4444/wd/hub"
 
 browser = "chrome"
 local = "core_local"
-testSuite = "Sanity"
+testSuite = "Appium"
+
+'''BS command -- browserstack-sdk ExecutionHandler.py'''

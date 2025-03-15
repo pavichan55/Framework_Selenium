@@ -1,0 +1,22 @@
+2025-03-15 14:52:34,840 General_store_validation
+2025-03-15 14:52:35,455 Starting new HTTP connection (1): 127.0.0.1:4723
+2025-03-15 14:52:36,471 Incremented Retry for (url='/status'): Retry(total=2, connect=None, read=None, redirect=None, status=None)
+2025-03-15 14:52:36,471 Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002673446CE00>, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')': /status
+2025-03-15 14:52:36,471 Starting new HTTP connection (2): 127.0.0.1:4723
+2025-03-15 14:52:37,479 Incremented Retry for (url='/status'): Retry(total=1, connect=None, read=None, redirect=None, status=None)
+2025-03-15 14:52:37,479 Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x000002673421BA70>, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')': /status
+2025-03-15 14:52:37,479 Starting new HTTP connection (3): 127.0.0.1:4723
+2025-03-15 14:52:38,487 Incremented Retry for (url='/status'): Retry(total=0, connect=None, read=None, redirect=None, status=None)
+2025-03-15 14:52:38,487 Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000026734526F30>, 'Connection to 127.0.0.1 timed out. (connect timeout=1.0)')': /status
+2025-03-15 14:52:38,487 Starting new HTTP connection (4): 127.0.0.1:4723
+2025-03-15 14:52:39,010 http://127.0.0.1:4723 "HEAD /status HTTP/1.1" 200 0
+2025-03-15 14:52:39,010 POST http://127.0.0.1:4723/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'appium:app': 'C:\\Users\\ADMIN\\PycharmProjects\\Appium\\General-Store.apk', 'appium:automationName': 'UiAutomator2', 'platformName': 'Android', 'appium:deviceName': 'emulator-5554', 'appium:appPackage': 'com.androidsample.generalstore', 'appium:appActivity': 'com.androidsample.generalstore.SplashActivity', 'appium:autoGrantPermissions': True, 'appium:noReset': True}}}
+2025-03-15 14:52:39,010 Starting new HTTP connection (1): 127.0.0.1:4723
+2025-03-15 14:53:01,300 http://127.0.0.1:4723 "POST /session HTTP/1.1" 500 0
+2025-03-15 14:53:01,300 Remote response: status=500 | data={"value":{"error":"unknown error","message":"An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms","stacktrace":"UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms\n    at getResponseForW3CError (C:\\Users\\ADMIN\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\errors.js:1143:9)\n    at asyncHandler (C:\\Users\\ADMIN\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\protocol\\protocol.js:487:57)"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '670', 'ETag': 'W/"29e-//N7WYLQWhcZT8wOjrWXP+TZL4w"', 'Date': 'Sat, 15 Mar 2025 09:23:01 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})
+2025-03-15 14:53:01,300 Finished Request
+2025-03-15 14:53:01,300 Error during setup: Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1143:9)
+    at asyncHandler (C:\Users\ADMIN\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:487:57)

@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -50,4 +51,8 @@ class InstanceWebElement:
             self.__driver.execute_script("arguments[0].click()",isclickjsvariable)
         except Exception as e:
             print("Element is not clickable",e)
+
+    # def ExplicitWait(self):
+    #     wait = WebDriverWait(self.__driver,30,poll_frequency=2)
+    #     wait.until(EC.visibility_of_element_located((By.ID, "element_id")))
             
