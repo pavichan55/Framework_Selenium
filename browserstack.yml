@@ -1,0 +1,22 @@
+userName: paviarun_dlV4OL
+accessKey: AjksDwyKjZRM4DJaoZvU
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: 120.0
+  - deviceName: OnePlus 9
+    osVersion: 11.0
+    browserName: chrome
+    deviceOrientation: portrait
+  - deviceName: iPhone 13
+    osVersion: 15
+    browserName: Chromium
+    deviceOrientation: portrait
+browserstackLocal: false
+buildName: bstack-demo
+buildIdentifier: ${BUILD_NUMBER}
+projectName: BrowserStack Sample
+debug: true
+networkLogs: true
+consoleLogs: info

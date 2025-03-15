@@ -16,14 +16,20 @@ class BasePage:
     
     def __init__(self):
         self.driver = None
-    
+
     def setup(self):
-        self.driver = Common.getDriver()
+        try:
+            self.driver = Common.getDriver()
+        except Exception as e:
+            GlobalLogger.logText(f"Error during setup: {str(e)}")
+            raise
         
     def teardown(self):
         self.driver.quit()
         if config.execution_mode == 'docker':
             subprocess.run(["docker-compose", "down"], check=True)
+        elif config.execution_mode == 'android':
+            Common.appium_service.stop()
         
     def execute(self):
         testHybridPacakage = DynamicDataManager.runtimedata["testFlowSuite"]
@@ -43,9 +49,9 @@ class BasePage:
                     dynamicrepodata=StaticdataManager.getKWDclassName(tf)
 
                     func_to_run = getattr(eval(dynamicrepodata[0] + "()"), dynamicrepodata[1])
-
-
                     func_to_run()
+
+
                     (DynamicDataManager.runtimedata["testFlowSuite"][testCaseIDkey]['testFlow']).pop(0)
                     dydata=(DynamicDataManager.runtimedata["testFlowSuite"][testCaseIDkey]['iterDictTestFlow']).items()
                     for itDictkey,itrValue in dydata:
